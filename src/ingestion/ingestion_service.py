@@ -48,6 +48,10 @@ class CSVDataSource(IDataSource):
         """
         content_list = []
         
+        # Return early if limit is 0
+        if limit == 0:
+            return content_list
+        
         with open(self.csv_path, 'r', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             
