@@ -43,3 +43,4 @@ models/
 Thumbs.db
 
 *.csv
+.vercel
